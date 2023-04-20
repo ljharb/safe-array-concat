@@ -1,0 +1,26 @@
+{
+	"name": "safe-array-concat",
+	"version": "0.0.0",
+	"description": "Array.prototype.concat, but is safe by ignoring Symbol.isConcatSpreadable",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"safe",
+		"array",
+		"concat",
+		"push",
+		"isconcatspreadable"
+	],
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ljharb/safe-array-concat.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ljharb/safe-array-concat/issues"
+	},
+	"homepage": "https://github.com/ljharb/safe-array-concat#readme"
+}
