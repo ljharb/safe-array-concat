@@ -55,7 +55,7 @@
 	},
 	"dependencies": {
 		"call-bind": "^1.0.2",
-		"get-intrinsic": "^1.2.0",
+		"get-intrinsic": "^1.2.1",
 		"has-symbols": "^1.0.3",
 		"isarray": "^2.0.5"
 	},
