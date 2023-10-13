@@ -6,7 +6,7 @@ var hasSymbols = require('has-symbols/shams')();
 var isConcatSpreadable = hasSymbols && Symbol.isConcatSpreadable;
 var species = hasSymbols && Symbol.species;
 
-var boundFnsHaveConfigurableLengths = Object.getOwnPropertyDescriptor && Object.getOwnPropertyDescriptor(function () {}.bind(), 'length').configurable;
+var boundFnsHaveConfigurableLengths = require('set-function-length/env').boundFnsHaveConfigurableLengths;
 
 var safeConcat = require('../');
 
