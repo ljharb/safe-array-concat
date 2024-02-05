@@ -63,8 +63,8 @@
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^2.0.0",
 		"set-function-length": "^1.2.0",
-		"tape": "^5.7.3",
-		"typescript": "^5.4.0-dev.20240114"
+		"tape": "^5.7.4",
+		"typescript": "next"
 	},
 	"dependencies": {
 		"call-bind": "^1.0.5",
