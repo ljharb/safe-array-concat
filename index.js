@@ -9,15 +9,16 @@ var callBound = require('call-bind/callBound');
 var $slice = callBound('Array.prototype.slice');
 
 var hasSymbols = require('has-symbols/shams')();
-var isConcatSpreadable = /** @type {const} */ hasSymbols && Symbol.isConcatSpreadable;
+var isConcatSpreadable = hasSymbols && Symbol.isConcatSpreadable;
 
 /** @type {never[]} */ var empty = [];
 var $concatApply = isConcatSpreadable ? callBind.apply($concat, empty) : null;
 
-var isArray = isConcatSpreadable ? require('isarray') : null;
+// eslint-disable-next-line no-extra-parens
+var isArray = isConcatSpreadable ? /** @type {(value: unknown) => value is unknown[]} */ (require('isarray')) : null;
 
-/** @type {typeof Array.prototype.concat} */
-var safeConcat = isConcatSpreadable
+/** @type {import('.')} */
+module.exports = isConcatSpreadable
 	// eslint-disable-next-line no-unused-vars
 	? function safeArrayConcat(item) {
 		for (var i = 0; i < arguments.length; i += 1) {
@@ -30,7 +31,7 @@ var safeConcat = isConcatSpreadable
 					empty[isConcatSpreadable] = true;
 				}
 				// @ts-expect-error ts(2721) ts(18047) not sure why TS can't figure out this can't be null
-				/** @type {T[]} */ var arr = isArray(arg) ? $slice(arg) : [arg];
+				var arr = isArray(arg) ? $slice(arg) : [arg];
 				// @ts-expect-error ts(7015) TS can't handle expandos on an array
 				arr[isConcatSpreadable] = true; // shadow the property. TODO: use [[Define]]
 				arguments[i] = arr;
@@ -40,5 +41,3 @@ var safeConcat = isConcatSpreadable
 		return $concatApply(arguments);
 	}
 	: callBind($concat, empty);
-
-module.exports = safeConcat;
