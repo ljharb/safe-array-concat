@@ -9,7 +9,7 @@ var callBound = require('call-bind/callBound');
 var $slice = callBound('Array.prototype.slice');
 
 var hasSymbols = require('has-symbols/shams')();
-var isConcatSpreadable = hasSymbols && Symbol.isConcatSpreadable;
+var isConcatSpreadable = /** @type {const} */ hasSymbols && Symbol.isConcatSpreadable;
 
 /** @type {never[]} */ var empty = [];
 var $concatApply = isConcatSpreadable ? callBind.apply($concat, empty) : null;
@@ -29,14 +29,14 @@ var safeConcat = isConcatSpreadable
 					// @ts-expect-error ts(7015) TS doesn't yet support Symbol indexing
 					empty[isConcatSpreadable] = true;
 				}
-				// @ts-expect-error ts(2721) ts(18047) not sure why TS can't figure out this can't be nul
+				// @ts-expect-error ts(2721) ts(18047) not sure why TS can't figure out this can't be null
 				/** @type {T[]} */ var arr = isArray(arg) ? $slice(arg) : [arg];
 				// @ts-expect-error ts(7015) TS can't handle expandos on an array
 				arr[isConcatSpreadable] = true; // shadow the property. TODO: use [[Define]]
 				arguments[i] = arr;
 			}
 		}
-		// @ts-expect-error ts(2345) TS doesn't understand that apply can take an arguments object
+		// @ts-expect-error ts(2345) https://github.com/microsoft/TypeScript/issues/57164 TS doesn't understand that apply can take an arguments object
 		return $concatApply(arguments);
 	}
 	: callBind($concat, empty);

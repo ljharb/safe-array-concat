@@ -62,8 +62,8 @@
 		"npmignore": "^0.3.1",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^2.0.0",
-		"set-function-length": "^1.2.0",
-		"tape": "^5.7.4",
+		"set-function-length": "^1.2.1",
+		"tape": "^5.7.5",
 		"typescript": "next"
 	},
 	"dependencies": {
