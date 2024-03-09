@@ -15,6 +15,7 @@
 		"prelint": "npm run tsc",
 		"lint": "eslint --ext=js,mjs .",
 		"tsc": "tsc -p .",
+		"posttsc": "attw -P",
 		"postlint": "evalmd README.md",
 		"prepublish": "not-in-publish || npm run prepublishOnly",
 		"prepublishOnly": "safe-publish-latest",
@@ -44,6 +45,7 @@
 	},
 	"homepage": "https://github.com/ljharb/safe-array-concat#readme",
 	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.15.1",
 		"@ljharb/eslint-config": "^21.1.0",
 		"@types/call-bind": "^1.0.5",
 		"@types/get-intrinsic": "^1.2.2",
