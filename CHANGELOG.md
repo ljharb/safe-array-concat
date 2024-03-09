@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.2](https://github.com/ljharb/safe-array-concat/compare/v1.1.1...v1.1.2) - 2024-03-09
+
+### Commits
+
+- [types] use a generic [`a1d744d`](https://github.com/ljharb/safe-array-concat/commit/a1d744d749033c91f0c108b28ac6dbc6016ecce4)
+- [Dev Deps] update `@ljharb/tsconfig`, `set-function-length` [`3d3da0a`](https://github.com/ljharb/safe-array-concat/commit/3d3da0ab110bce21f466381c5d09f93200a20f85)
+
 ## [v1.1.1](https://github.com/ljharb/safe-array-concat/compare/v1.1.0...v1.1.1) - 2024-03-09
 
 ### Commits
