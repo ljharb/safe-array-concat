@@ -47,7 +47,7 @@
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.15.1",
 		"@ljharb/eslint-config": "^21.1.0",
-		"@ljharb/tsconfig": "^0.1.1",
+		"@ljharb/tsconfig": "^0.2.0",
 		"@types/call-bind": "^1.0.5",
 		"@types/get-intrinsic": "^1.2.2",
 		"@types/has-symbols": "^1.0.2",
@@ -63,7 +63,7 @@
 		"npmignore": "^0.3.1",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^2.0.0",
-		"set-function-length": "^1.2.1",
+		"set-function-length": "^1.2.2",
 		"tape": "^5.7.5",
 		"typescript": "next"
 	},
