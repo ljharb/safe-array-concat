@@ -66,6 +66,7 @@
 	},
 	"dependencies": {
 		"call-bind": "^1.0.8",
+		"call-bound": "^1.0.2",
 		"get-intrinsic": "^1.2.6",
 		"has-symbols": "^1.1.0",
 		"isarray": "^2.0.5"
