@@ -65,9 +65,9 @@
 		"typescript": "next"
 	},
 	"dependencies": {
-		"call-bind": "^1.0.7",
-		"get-intrinsic": "^1.2.4",
-		"has-symbols": "^1.0.3",
+		"call-bind": "^1.0.8",
+		"get-intrinsic": "^1.2.6",
+		"has-symbols": "^1.1.0",
 		"isarray": "^2.0.5"
 	},
 	"auto-changelog": {
