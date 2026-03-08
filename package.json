@@ -44,7 +44,7 @@
 	"homepage": "https://github.com/ljharb/safe-array-concat#readme",
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.18.2",
-		"@ljharb/eslint-config": "^22.1.3",
+		"@ljharb/eslint-config": "^22.2.0",
 		"@ljharb/tsconfig": "^0.3.2",
 		"@types/call-bind": "^1.0.5",
 		"@types/get-intrinsic": "^1.2.3",
